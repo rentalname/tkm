@@ -1,0 +1,160 @@
+.people-picker *,
+.people-picker__menu * {
+	margin: 0;
+	padding: 0;
+}
+
+.people-picker {
+	font-size: .9em;
+	height: 30px;
+	line-height: 28px;
+	cursor: pointer;
+	padding: 0 0 0 30px;
+	background: url('../images/rings-icon.gif') 1px 2px no-repeat;
+	border: 1px solid #9c9c9c;
+	border-radius: 5px;
+}
+
+.people-picker__button-label {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.people-picker__caret {
+	float: right;
+	padding: 0 4px;
+}
+
+.people-picker__caret span {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px solid #000;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	content: '';
+}
+
+.people-picker__menu {
+	display: none;
+	z-index: 10000;
+	position: absolute;
+	border: solid 1px #9c9c9c;
+	border-radius: 5px;
+	font-size: .9em;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.people-picker__menu ul {
+	list-style: none;
+}
+
+.people-picker__menu-header {
+	display: none;
+}
+
+.people-picker__checkboxes {
+	overflow-y: auto;
+}
+
+.people-picker__option {
+	display: inline-block;
+	padding: .3em .5em;
+	cursor: pointer;
+}
+
+.people-picker__option label {
+	display: block;
+	cursor: pointer;
+}
+
+.people-picker__option input {
+	margin-top: 0;
+	margin-right: .5em;
+}
+
+.people-picker__option input:focus {
+	outline: 0;
+}
+
+.people-picker__option span {
+	cursor: pointer;
+}
+
+.people-picker__optgroup {
+	display: block;
+	color: #fff;
+	padding: .3em .5em;
+	font-size: 1.25em;
+}
+
+.people-picker__optgroup a {
+	display: block;
+}
+
+.people-picker__optgroup a,
+.people-picker__optgroup a:hover,
+.people-picker__optgroup a:focus,
+.people-picker__optgroup a:visited,
+.people-picker__optgroup a:active {
+	color: #fff;
+}
+
+.people-picker__ring-number {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	line-height: 16px;
+	margin-right: .5em;
+	text-align: center;
+	border: solid 3px #fff;
+	border-radius: 999px;
+}
+
+/*----------------------------------
+| Custom colors
+----------------------------------*/
+.people-picker__ring-1-option {
+	color: #1f9ff0;
+}
+
+.people-picker__ring-2-option {
+	color: #ff931e;
+}
+
+.people-picker__ring-3-option {
+	color: #9c9c9c;
+}
+
+.people-picker__ring-0 {
+	display: none;
+}
+
+.people-picker__ring-1 {
+	background-color: #1f9ff0;
+}
+
+.people-picker__ring-2 {
+	background-color: #ff931e;
+}
+
+.people-picker__ring-3 {
+	background-color: #9c9c9c;
+}
+
+@media screen and (min-width: 435px) {
+}
+
+@media screen and (min-width: 750px) {
+	.people-picker {
+		height: 35px;
+		line-height: 33px;
+		background-position: 5px 4px;
+		padding-left: 35px;
+	}
+}

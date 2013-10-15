@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, user-scalable=yes"/>
+
+	<title>Home &middot; To keep me</title>
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/jquery.multiselect.css">
+	<link rel="stylesheet" href="assets/css/jquery.carousel.css">
+	<link rel="stylesheet" href="assets/css/jquery.tagger.css">
+	<link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="assets/css/jquery.ring-selector.css">
+	<link rel="stylesheet" href="assets/css/jquery.ui.autocomplete.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="home">
+<div class="site-container">
+
+	<header class="site-header">
+		<h1 class="site-header__logo"><a href="#">To Keep Me</a></h1>
+
+		<div class="user-menu dropdown">
+			<div class="user-menu__notifications">
+				<a href="#" class="user-menu__notifications-link">0</a>
+			</div>
+
+			<a class="user-menu__link" data-toggle="dropdown" href="#">
+				<img class="user-menu__profile-picture" src="uploads/profiles/thumbnails/default.png">
+				<span class="user-menu__nickname">Anonymous</span>
+			</a>
+
+			<ul class="dropdown-menu" style="right: -1px; left: auto;">
+				<li><a href="#" class="user-menu__add-friend">Add Friend</a></li>
+				<li><a href="#" class="user-menu__edit-profile">Settings</a></li>
+				<li><a href="#" class="user-menu__sign-out">Sign Out</a></li>
+			</ul>
+		</div>
+
+		<div class="publish-links">
+			<div class="publish-links__container">
+				<a class="publish-links__normal" href="#">Share anything, safely...</a>
+			</div>
+		</div>
+	</header>
+
+	<div class="site-rings">
+	</div>
+
+	<!-- DASHBOARD -->
+	<div class="site-dialog site-dashboard">
+		<a href="#" class="site-dashboard__previous-button"></a>
+		<a href="#" class="site-dashboard__next-button"></a>
+
+		<a href="#" class="site-dashboard__column-link site-dashboard__column-link--media"><img src="assets/images/media-icon.png"></a>
+		<a href="#" class="site-dashboard__column-link site-dashboard__column-link--notes"><img src="assets/images/notes-icon.png"></a>
+		<a href="#" class="site-dashboard__column-link site-dashboard__column-link--i-want"><img src="assets/images/i-want-icon.png"></a>
+		<a href="#" class="site-dashboard__column-link site-dashboard__column-link--favorites"><img src="assets/images/favorites-icon.png"></a>
+
+		<div class="site-dashboard__people-picker"></div>
+
+		<div class="site-dashboard__carousel"></div>
+
+		<a href="#" class="site-dashboard__close-button"><img src="assets/images/close-button.png" class="img-responsive"></a>
+	</div>
+
+	<!-- REPLIES -->
+	<div class="replies-widget site-dialog">
+		<div class="replies-widget__post"></div>
+		<ul class="replies-widget__replies"></ul>
+
+		<form>
+			<div class="form-group">
+				<textarea rows="3" class="replies-widget__reply-input form-control"></textarea>
+			</div>
+
+			<div class="form-group error-message"></div>
+
+			<div class="text-right">
+				<button type="button" class="replies-widget__close-button btn btn-default">Close</button>
+				<button type="submit" class="replies-widget__submit-button btn btn-success">Reply</button>
+			</div>
+		</form>
+	</div>
+
+	<!-- PUBLISHER -->
+	<form class="site-publisher site-dialog">
+		<legend>Share anything, safely...</legend>
+
+		<div class="form-group">
+			<a href="#" class="site-publisher__tagger-button btn btn-success"></a>
+		</div>
+
+		<div class="form-group site-publisher__pictures-container clearfix">
+		</div>
+
+		<div class="form-group">
+			<textarea class="form-control site-publisher__content-input" rows="7"></textarea>
+		</div>
+
+		<div class="form-group error-message"></div>
+
+		<div class="text-right">
+			<label href="#" class="site-publisher__upload-picture-button">
+				Upload picture
+				<input type="file" class="site-publisher__picture-input" accept="image/*" multiple="multiple" capture>
+			</label>
+
+			<button type="button" class="site-dashboard__cancel-button btn btn-default">Cancel</button>
+			<button type="submit" class="site-dashboard__submit-button btn btn-success">Share</button>
+		</div>
+	</form>
+
+	<!-- PROFILE EDITOR -->
+	<form class="profile-editor site-dialog">
+		<legend>Settings</legend>
+
+		<div class="profile-editor__people-picker-container form-group">
+		</div>
+
+		<div class="form-group profile-editor__profile-container">
+		</div>
+
+		<div class="form-group text-center">
+			<span class="success-message"></span>
+			<span class="error-message"></span>
+		</div>
+
+		<div class="text-right">
+			<button type="button" class="profile-editor__cancel-button btn btn-default">Cancel</button>
+			<button type="submit" class="profile-editor__submit-button btn btn-success">Save</button>
+		</div>
+	</form>
+
+	<!-- PASSWORD CHANGER -->
+	<form class="password-changer site-dialog">
+		<legend>Change Password</legend>
+
+		<div class="form-group">
+			<label>New password *</label>
+			<input type="password" class="password-changer__new-password-input form-control">
+		</div>
+
+		<div class="form-group">
+			<label>Confirm password *</label>
+			<input type="password" class="password-changer__repeat-password-input form-control">
+		</div>
+
+		<div class="form-group">
+			<label>Current password *</label>
+			<input type="password" class="password-changer__current-password-input form-control">
+		</div>
+
+		<div class="form-group text-center">
+			<span class="success-message"></span>
+			<span class="error-message"></span>
+		</div>
+
+		<div class="text-right">
+			<button type="button" class="password-changer__cancel-button btn btn-default">Cancel</button>
+			<button type="submit" class="password-changer__submit-button btn btn-success">Save</button>
+		</div>
+	</form>
+
+	<!-- FRIEND ADDER -->
+	<form class="friend-adder site-dialog">
+		<legend>Add a Friend</legend>
+
+		<div class="form-group">
+			<label>Email or UserName *</label>
+			<input type="text" class="friend-adder__search-term-input form-control">
+			<input type="hidden" class="friend-adder__friend-id-input">
+		</div>
+
+		<div class="form-group">
+			<label>Nickname *</label>
+			<input type="text" class="friend-adder__nickname-input form-control" disabled="disabled">
+		</div>
+
+		<div class="friend-adder__ring-selector-container form-group">
+			<label>Ring</label>
+		</div>
+
+		<div class="form-group text-center">
+			<span class="success-message"></span>
+			<span class="error-message"></span>
+		</div>
+
+		<div class="text-right">
+			<button type="button" class="friend-adder__cancel-button btn btn-default">Cancel</button>
+			<button type="submit" class="friend-adder__submit-button btn btn-success">Save</button>
+		</div>
+	</form>
+
+</div>
+
+<script type="text/template" id="reply-template">
+	<img src="/uploads/profiles/thumbnails/<%= reply.getProfilePicture() %>"
+	class="replies-widget__profile-picture-img">
+	<%= reply.get('text') %>
+
+	<div class="replies-widget__reply-date">
+		<%= reply.getNickname() %> ~ <%= parseDate(reply.get('createdAt')) %>
+	</div>
+</script>
+
+<script type="text/template" id="user-settings">
+	<div class="profile-editor__profile-picture">
+	</div>
+
+	<div class="profile-editor__data">
+		<div class="form-group">
+			<label>Name</label>
+			<input type="text" class="profile-editor__first-name-input form-control"
+			value="<%= user.get('firstName') %>" placeholder="First">
+			<input type="text" class="profile-editor__last-name-input form-control"
+			value="<%= user.get('lastName') %>" placeholder="Last">
+		</div>
+
+		<div class="form-group">
+			<label>UserName *</label>
+			<input type="text" class="profile-editor__nickname-input form-control"
+			value="<%= user.get('nickname') %>" placeholder="Required">
+		</div>
+
+		<div class="form-group">
+			<label>Email *</label>
+			<input type="text" class="profile-editor__email-input form-control"
+			value="<%= user.get('email') %>" placeholder="required">
+		</div>
+
+		<div>
+			<label>Password</label>
+			<a href="#" class="profile-editor__change-password-link">Change password</a>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="friend-settings">
+	<div class="profile-editor__profile-picture">
+	</div>
+
+	<div class="profile-editor__data">
+		<div class="form-group">
+			<label>Nickname *</label>
+			<input type="text" class="profile-editor__nickname-input form-control"
+			value="<%= friend.get('nickname') %>">
+		</div>
+
+		<div class="profile-editor__ring-selector-container">
+			<label>Ring</label>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="post-template">
+	<div class="carousel__post-header">
+		<ul class="carousel__post-tags">
+		<% for (var i = 0; i < categories.length; i++) { %>
+			<% var category = categories[i] %>
+			<li class="carousel__post-category"><%= category.name %></li>
+		<% } %>
+
+		<% for (var i = 0; i < tags.length; i++) { %>
+			<% var tag = tags[i] %>
+			<li class="carousel__post-tag"><%= tag.name %></li>
+		<% } %>
+		</ul>
+	</div>
+
+	<div class="carousel__post-content">
+		<%= post.getSanitizedContent() %>
+
+		<ul class="carousel__pictures">
+		<% for (var i = 0; i < pictures.length; i++) { %>
+			<% var picture = friend.get('friendId') + '_' + post.get('id') + '_' + pictures[i].filename %>
+			<li>
+				<a href="uploads/posts/<%= picture %>" rel="post-<%= post.get('id') %>" class="carousel__picture-link">
+					<img src="uploads/posts/thumbnails/<%= picture %>" class="img-responsive">
+				</a>
+
+				<a href="#" class="carousel__delete-picture-link" data-id="<%= pictures[i].id %>">
+					<i class="icon-trash"></i>
+				</a>
+			</li>
+		<% } %>
+		</ul>
+	</div>
+
+	<div class="carousel__post-date">
+		<%= friend.get('nickname') %> ~ <%= parseDate(post.get('created_at')) %>
+	</div>
+
+	<div class="carousel__post-error"></div>
+
+	<% if (mode !== 'reply') { %>
+	<div class="carousel__post-footer">
+		<a href="#" class="carousel__replies-link">Replies (<span>0</span>)</a>
+
+		<% if (isUser) { %>
+		<a href="#" class="carousel__toggle-options-link"></a>
+		<ul class="carousel__post-options">
+			<li><a href="#" class="carousel__update-post-link">Update</a></li>
+			<li><a href="#" class="carousel__edit-post-link">Edit</a></li>
+			<li><a href="#" class="carousel__edit-tags-link">Tags</a></li>
+			<li><a href="#" class="carousel__delete-post-link">Delete</a></li>
+		</ul>
+		<% } %>
+	</div>
+	<% } %>
+</script>
+
+<script src="assets/js/libs/eWebSocket.js"></script>
+<script src="assets/js/libs/jquery.js"></script>
+<script src="assets/js/libs/jquery-ui.js"></script>
+<script src="assets/js/libs/jquery.cookie.js"></script>
+<script src="assets/js/libs/bootstrap.min.js"></script>
+<script src="assets/js/libs/jquery.multiselect.js"></script>
+<script src="assets/js/libs/jquery.carousel.js"></script>
+<script src="assets/js/libs/jquery.tagger.js"></script>
+<script src="assets/js/libs/jquery.fancybox.js"></script>
+<script src="assets/js/libs/jquery.ring-selector.js"></script>
+<script src="assets/js/libs/underscore.min.js"></script>
+<script src="assets/js/libs/backbone.js"></script>
+<script src="assets/js/libs/backbone-validation.js"></script>
+<script src="assets/js/libs/backbone-validation-config.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/routers.js"></script>
+<script src="assets/js/models.js"></script>
+<script src="assets/js/collections.js"></script>
+<script src="assets/js/views.js"></script>
+<script src="assets/js/categories.js"></script>
+
+<script>
+	var email = $.cookie('email');
+	var password = $.cookie('password');
+
+	if (email == null || email == ''  || password == null || password == '') {
+		document.location = '/index.html';
+	}
+
+	App.init();
+
+	new App.routers.Home();
+	Backbone.history.start();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+	border: 1px solid #9c9c9c;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.ui-autocomplete * {
+	padding: 0;
+	margin: 0;
+}
+
+.ui-autocomplete a {
+	display: block;
+	text-align: left;
+	padding: 5px;
+	cursor: pointer;
+	height: 40px;
+}
+
+.ui-autocomplete .ui-state-focus {
+	background-color: #f1f1f1;
+}
+
+.ui-autocomplete img {
+	height: auto;
+	width: 30px;
+}

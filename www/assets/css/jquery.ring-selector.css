@@ -1,0 +1,30 @@
+.ring-selector {
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+.ring-selector li {
+	float: left;
+	margin-left: 10px;
+}
+
+.ring-selector li:first-child {
+	margin-left: 0;
+}
+
+.ring-selector a {
+	display: inline-block;
+	color: #47a447;
+	border: solid 1px #4cae4c;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 999px;
+}
+
+.ring-selector a:hover, .ring-selector .selected a {
+	background-color: #5cb85c;
+	color: #fff;
+}
